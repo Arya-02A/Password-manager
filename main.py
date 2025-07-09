@@ -36,7 +36,7 @@ def save_data():
     }
 
     if len(website) == 0 or len(password) == 0:
-        messagebox.showinfo(title="Oops!", message=f"Please make sure you have'nt left any fields empty.")
+        messagebox.showinfo(title="Oops!", message=f"Please make sure you haven't left any fields empty.")
     else:
         try:
             with open("password_file.json", "r") as password_file:
@@ -82,8 +82,8 @@ logo = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=logo)
 canvas.grid(row=0, column=1)
 
-website_lable = Label(text="Website: ")
-website_lable.grid(row=1, column=0)
+website_label = Label(text="Website: ")
+website_label.grid(row=1, column=0)
 
 website_input = Entry(width=25)
 website_input.grid(row=1, column=1)
@@ -92,15 +92,14 @@ website_input.focus()
 search_button = Button(text="Search", width=15, command=find_password)
 search_button.grid(row=1, column=2)
 
-email_lable = Label(text="Email/Username: ")
-email_lable.grid(row=2, column=0)
+email_label = Label(text="Email/Username: ")
+email_label.grid(row=2, column=0)
 
 email_input = Entry(width=43)
 email_input.grid(row=2, column=1, columnspan=2)
-email_input.insert(0, "vasantimadiwale@gmail.com")
 
-password_lable = Label(text="Password: ")
-password_lable.grid(row=3, column=0)
+password_label = Label(text="Password: ")
+password_label.grid(row=3, column=0)
 
 password_input = Entry(width=25)
 password_input.grid(row=3, column=1)
